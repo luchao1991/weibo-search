@@ -514,5 +514,5 @@ class SearchSpider(scrapy.Spider):
                     retweet['retweet_id'] = ''
                     yield {'weibo': retweet, 'keyword': keyword}
                     weibo['retweet_id'] = retweet['id']
-                print(weibo)
+                # print(weibo)
                 yield {'weibo': weibo, 'keyword': keyword}
