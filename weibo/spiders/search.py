@@ -75,6 +75,7 @@ class SearchSpider(scrapy.Spider):
                                              'keyword': keyword,
                                              'province': region
                                          })
+        print(keyword)
 
     def check_environment(self):
         """判断配置要求的软件是否已安装"""
@@ -99,7 +100,7 @@ class SearchSpider(scrapy.Spider):
             '//div[@class="card card-no-result s-pt20b40"]')
         page_count = len(response.xpath('//ul[@class="s-scroll"]/li'))
         if is_empty:
-            print('当前页面搜索结果为空')
+            print(str(keyword)+':当前页面搜索结果为空')
         elif page_count < 50:
             # 解析当前页面
             for weibo in self.parse_weibo(response):
@@ -143,7 +144,7 @@ class SearchSpider(scrapy.Spider):
         date = response.meta.get('date')
         page_count = len(response.xpath('//ul[@class="s-scroll"]/li'))
         if is_empty:
-            print('当前页面搜索结果为空')
+            print()
         elif page_count < 50:
             # 解析当前页面
             for weibo in self.parse_weibo(response):
@@ -190,7 +191,7 @@ class SearchSpider(scrapy.Spider):
         end_time = response.meta.get('end_time')
         page_count = len(response.xpath('//ul[@class="s-scroll"]/li'))
         if is_empty:
-            print('当前页面搜索结果为空')
+            print(str(keyword)+':当前页面搜索结果为空')
         elif page_count < 50:
             # 解析当前页面
             for weibo in self.parse_weibo(response):
@@ -231,7 +232,7 @@ class SearchSpider(scrapy.Spider):
         province = response.meta.get('province')
         page_count = len(response.xpath('//ul[@class="s-scroll"]/li'))
         if is_empty:
-            print('当前页面搜索结果为空')
+            print(str(keyword)+':当前页面搜索结果为空')
         elif page_count < 50:
             # 解析当前页面
             for weibo in self.parse_weibo(response):
@@ -269,7 +270,7 @@ class SearchSpider(scrapy.Spider):
         is_empty = response.xpath(
             '//div[@class="card card-no-result s-pt20b40"]')
         if is_empty:
-            print('当前页面搜索结果为空')
+            print(str(keyword)+':当前页面搜索结果为空')
         else:
             for weibo in self.parse_weibo(response):
                 self.check_environment()

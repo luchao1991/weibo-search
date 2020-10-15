@@ -12,8 +12,7 @@ DEFAULT_REQUEST_HEADERS = {
     'Accept':
     'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-US;q=0.7',
-    'cookie': 'login_sid_t=f54b4e0aee7010691db797c01d28c2fa; cross_origin_proto=SSL; WBStorage=70753a84f86f85ff|undefined; _s_tentry=passport.weibo.com; wb_view_log=1536*9602; Apache=875837143935.3563.1602484676282; SINAGLOBAL=875837143935.3563.1602484676282; ULV=1602484676286:1:1:1:875837143935.3563.1602484676282:; WBtopGlobal_register_version=2020101214; appkey=; SUB=_2A25yh4vrDeRhGeRP61cW9yfKzDuIHXVR9PojrDV8PUNbmtAKLRPGkW9NUF1EFh8AaZdfkvbanOUp8ZB475oYn5Rl; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WhjFiOdcKpn0bo7JeFXq4Rf5JpX5KzhUgL.Fozpeh-NS0.cS0M2dJLoIE-LxKnLBoqL122LxKqL1-BLBK-LxKnLBoqL122EeK5fS0M4SoMN; SUHB=0idq8NveYuOZ8g; ALF=1634021179; SSOLoginState=1602485179; wb_view_log_2105779677=1536*9602; webim_unReadCount=%7B%22time%22%3A1602485215665%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22chat_group_notice%22%3A0%2C%22allcountNum%22%3A3%2C%22msgbox%22%3A0%7D; wvr=6'
-}
+    'cookie': '_T_WM=48c3123a1587857f0ace6a0d4739c61c; SCF=Av01CLfkHwsSweAyUEBH9i9o6djfCy82cRkAQSdZX5zGq6_xS4PUBEMMcT7flxYuFp2eKrrIVJGpi4dz-Y1d76w.; SUB=_2A25yg2X5DeRhGeRP61cW9yfKzDuIHXVRjAuxrDV6PUJbktAKLRj1kW1NUF1EFjSs2hq7xZPdDT3Avv7MgYrewlfl; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WhjFiOdcKpn0bo7JeFXq4Rf5JpX5KzhUgL.Fozpeh-NS0.cS0M2dJLoIE-LxKnLBoqL122LxKqL1-BLBK-LxKnLBoqL122EeK5fS0M4SoMN; SUHB=0oUp1Kua8ZM3b7; SSOLoginState=1602688425; ALF=1605280425'}
 ITEM_PIPELINES = {
     'weibo.pipelines.DuplicatesPipeline': 300,
     'weibo.pipelines.CsvPipeline': 301,
